@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="shane" content="Shane lin" />
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>銀河網路</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- nav bar -->
+      <nav>
+        <div class="nav-left">
+          <a href="#">Home</a><a href="#">Service</a><a href="#">About Us</a
+          ><a href="#">Our Clients</a><a href="#">Blog</a
+          ><a href="#">Contact Us</a>
+        </div>
+        <div class="nav-right">
+          <span
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA40lEQVR4nO3Vvw7BUBTH8a/EJEZikoinEO/AEyDegt3KI0gfQYmZWUQHg8kTsKlBJVSaHHLT1N+ebn7JmXpzPuntOSn882XmgG+UB9RQjBcCfKCvCewjAEsTWEYAK03AigAuQFYLaD95g7QWkAfORvMNUEA5tjTfCqieigBHoERCmQpiJwWUAVeQTlJIQ4Ar0HxyJpiuTBykZyDd0LNgABzZE0d2aADUvwFSBhLUGChK83XEzgR1+vW6DtLAlRH2X9TPH37ypnEs4J4qMAptvCpwTw5oAUNgAezkfzJ7nPiHD3IDdftjhkFxZisAAAAASUVORK5CYII="
+          /></span>
+          <p>Hotline: +516 260 0598</p>
+        </div>
+      </nav>
+      <!-- toggle -->
+
+      <div class="burger">
+        <div class="nav-toggle" id="navToggle" onclick="toggleMenu()">
+          &#9776;
+        </div>
+        <div class="burger-nav-left" id="navLeft">
+          <a href="#">Home</a>
+          <a href="#">Service</a>
+          <a href="#">About Us</a>
+          <a href="#">Our Clients</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="burger-nav-right">
+          <span
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA40lEQVR4nO3Vvw7BUBTH8a/EJEZikoinEO/AEyDegt3KI0gfQYmZWUQHg8kTsKlBJVSaHHLT1N+ebn7JmXpzPuntOSn882XmgG+UB9RQjBcCfKCvCewjAEsTWEYAK03AigAuQFYLaD95g7QWkAfORvMNUEA5tjTfCqieigBHoERCmQpiJwWUAVeQTlJIQ4Ar0HxyJpiuTBykZyDd0LNgABzZE0d2aADUvwFSBhLUGChK83XEzgR1+vW6DtLAlRH2X9TPH37ypnEs4J4qMAptvCpwTw5oAUNgAezkfzJ7nPiHD3IDdftjhkFxZisAAAAASUVORK5CYII="
+          /></span>
+          <p>Hotline: +516 260 0598</p>
+        </div>
+      </div>
+
+      <!-- landing page -->
+      <section class="landing-page">
+        <div class="landing-top">
+          <h1>Fusion Travel</h1>
+          <p>Lets Discover The World Together</p>
+          <button class="landing-btn">Plan Your Trip</button>
+        </div>
+        <div class="landing-bottom">
+          <div class="landing-bottom-l">
+            <a href="#"
+              ><span
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6klEQVR4nO2Zz2pTURDGf8RYabOxagRTH0HBRWvyEK6k6lZBqkt1E+Kfndqt2qq4rgWLFqq+gC9gwRKw2IUUTVGK1VZJUxEiByYQhnOTe889yU0gHwyUJPOdOefeM/PNFAYYYAAfSAEF4CawCJSBLeCv2JZ89gooAXnxSRzHgWngC1CPaMbnPjCWROCHgSfAnkPg2mrAY+BQt4K/AGx6CFyb4TzfycDTcupBAfwCngOXgQkgC+wXy8pn5rt5YLsFz6ys5RXDwNuABT8CF+U3UfguAasBnG8i8rVEOiD4KnAt5mmlgRvCpflf+3oSTy3kX4Fx/GECqFjWmfFxYTXpMpDDP3LCrdebjJMqNy0n34ngGzCX/ZNa8zswigN0xql6fm2CcMJyJx65VNiaIjEXtlu4pdbejfrkpy2p0ntuboGM5VLfIyRSFm1j8nxYzHnSN1dUDOthBWDBUmGjFBXj8we4HbMYjQA7KhaTbtuipJyMPIiCZt/PcdIg8ELxFcM4LSono1+iwCYN3gGnHDYwpXhehnEquzy2Nhsw9g94Jrk+LPKKYyWM0w/ldMTTBhr2E7guKrUdjipfU1jbQjcpQ/jdQMNMxT3XhuuA8qn12gbOdGIDff8KlZXT6QQvccHlEvd9Gi0pp/kEC9mCSyHTuXc7ISmRAX6rWMZdxZxpwLst5q66ijlkYtbsvJqAnN5QMdyNQjBmaWjM9KBbuBO3oUHGfc0kVQdd5IKTlpbyoa+mvtKFpn7NV1OPzCp1Tl+OWIzCIgu8t6x3Ni7xbICOMdMDn6/NmmWdBz7I0zKr1ORVmR6YjOGKjNQL22hxCdiHJwzLrNImEyrSgJseNixGJM9vBHAu+RzuNj+JmRZibUd62Cmp5lmR4kOiKvOy0QVLha2rjOPt5G2YlMxQ92zffFzYsBiVcZ8udi62K6d+kASQk4nZukPgxsfIg2P0AFJSpYui2Veks9sTM39/kO+K8tue+DfrAAPQ5/gPH4cUqa4HY08AAAAASUVORK5CYII=" /></span
+            ></a>
+          </div>
+          <div class="landing-bottom-r">
+            <i>Watch</i>
+            <p>INTRO VIDEO</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- welcome page -->
+      <section class="welcome">
+        <div class="welcome-top">
+          <h3>Welcome to Fusion</h3>
+          <p>
+            Nam consectetur elementum neque vitae condimentum. Aenean dignissim,
+            turpis et tincidunt finibus, massa purus malesuada metus, a commodo
+            velit magna nec nibh. Donec dictum fringilla tempus. Nunc rhoncus
+            sapien lectus, non fermentum neque euismod quis. Phasellus sagittis
+            tortor in accumsan
+          </p>
+        </div>
+
+        <!-- welcome card -->
+        <div class="welcome-bottom">
+          <div class="welcome-card">
+            <span
+              ><img
+                class="air-plane"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaElEQVR4nO2aPYhTQRDH51S0EhU/2pNwzuQUraxs7KwsPQuxERvF+mytRE7wsFLUTrHJm3l3iFzlB36CjYVocYVyWnl+oGiRy+zTkZdgMDHJLdF3efvIH6Zc3vyyszuzMwEYaqjByzGeVcHPyvTOMT51TNeqM7QdQpMyLToh+9NUcMEqY1shJClT3A5Sh2G6a/f3r4FQ5KLygU4gDcPzEIrMYMQxznfZlZ9JTBMQipRpstuuqOD3WjS+C0KQxeXNKlTtGmKM81YpbYAQpEI3up+VepjNpmEIeZdGtK8XSAMGT0MIckLPe4II/UhvOci7NKYTHrvyacUyvwreTH+9tPRwQud819ksrVfGb8vBOKZnNje2biWu0y8tH47LB33XOqFLy4I0kuWVbCmg7szDtuvzhZ2BVT5raxHu8QMhqzEezxaEabr9o0mEh73XCz7xAUlzj0a0NzOQhOlIx6TmWQQmER713RUVfGu3cEsmIEtxGTuGgtAxn/XpQe5U3vfYmTtWgdX/HcQMRv468Dk2ZfromB6p4Cmr7FzbApO+JwbtYJ/2qso7Sk0QJzSVA6f6tTd2e/em3yCHcuBQ/8Y0XQdJy4iBO/MPpozviwXiQg8toQtFOOyvbWZ0Y+DXL75sXr/1hCj0dfBO+ZkKfXBCD5TxZEtCXKoQFaJESToVfSEWjU7wYiHKeCf0uBAPK20/6KE+dVXoerP5wHg52OZDYdpBGTboktw36NSrZUqTkHdpEZrYVpSxghZh0GNFGb25nsNQmoLgx9OC94IaTyvTYhpCbRALJqVtEPhfOK4aj48O2q+hhoLs9Asnl4qPaPl0hQAAAABJRU5ErkJggg=="
+            /></span>
+            <h3>Best Travel Agency</h3>
+            <p>
+              SpaceTeam bootstrapping user centered design sticky note
+              convergence fund
+            </p>
+          </div>
+          <div class="welcome-card shadow">
+            <span
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACzElEQVR4nO2Zz2sTURDH38Ff6EHwB4IKlZKdSYOKWkQRQcSbVxE8qCiCgnjxpCB48ORfUC0oFb1t5qXaQ0/WUusPsBavUjwpUkUPFqrpzot98ppQW7Ipb5NN3i7sF74Q2OxkPjsz+zZvhciUKVOmTEnWXMnrYYKbTDiiJHxkCbMsIWAJ0yzhhSK8Ewx6+2zjBcXcfnOOObcWw8SarcbG5yzhxhxBPjYALnqHWMKokqjtDK8V4fFG8VQRTiiCN7bxuAp6sGkA7RfWKIL7TDhvD7EM6KEe6l2/GO/x3g1KwkAzsbiaQ5/JKRrEEGxRhOPNASwx4TsTS/u5rYrgfcvxJI7pUn6zHcRwbm0sEP8rM1F1XPFwzKoySuKDGH+0TYb+FSFY5g83PxOdNRfxyErVeOU6QWXvl6EQwSDuSUByOorn/Fyhvq0IbrtOTEVtL8JbIfMRZdFLhplwpH4+CD+5TkxFNkyFtdbv1FVEwmxIa2E5fSD4J6Qi+D2FFZkOmRGYdJ2YimyYCGutJymsyKOw2+/V9IHglTqQMnndrhNTEa2pp6sOpDYnb10np2xNOC4aqSK9884TlHauFOFsQxDd37s6HSs8TOnRY6sagtSqciYFbXVK2IglDDlPVoabCYetIBZa7NnubUz4JXkQ8FU/xe0iigKZP2CeZRIDIbHc9P5WheCcawBVcyDxomhFZsV3uSHBhPMs4XpLEIswlL/MEv86gaD8NRGnAsILLIE7NxMQmAVatENcgqNM8K0Dlfix0kZ4LNIyt9Ps6bYNhPBDeRB3tRViEWaga50ivBvn3FRvKNC/dAe/YzLvOpjwcwzzMK3IOylcSvvdG82VbKESvvYLm0RSVCnhaSb4aV8F/GUWXJFEad/bYR7qLKowbL4rkq6A4BITzoQAzJhjIk3S1NO17K8zwWTZL+REGqUXXuPBPWPz2XU+mTKJ6PoH2ZHqGRDQIWIAAAAASUVORK5CYII="
+              />
+            </span>
+            <h3>Best Price Guarantee</h3>
+            <p>
+              User story Steve Jobs Stev Jobs iterate human-centered design
+              iterate pair progra ming 360 campaign.
+            </p>
+          </div>
+          <div class="welcome-card">
+            <span
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADQElEQVR4nO1YPUwUURB+apTC2JgYiBUaduZAAoW9UljQ2EhsLQFrC6NGMNpYIGqjIQEjdN7NHJAojR2VJhZWWiiFHQYV/Mux89Bn3sHB3rp7u7K3wib3JZts9u59M9/MvDfvPaUaaKCBBoJQysMxzfjWPvZdZQ1CwJrR2EcYSGUJLuc6hfHXpgDC3y473SqL0ddZy4LLTreNeCXy3ne3AF0qU7VPUMjUXHA9tV+p+6BvKivRV0Hfd2sW3BqRzkQWJCT6mciCGyPCuyYLJt/RogvYI4wDmnBUCOeEYDFOdH1ZWrRjyxyWq4A9lrs+To6d3F8i57gmPCsMlzXDmDA+F8KP/gZV1awiIuvv0DqIg3FFE7wSwrwmvL3GzgWZzp00U10HYzkvBEPC4NYyEmwYXE14M4pfM9wSBtkOvzBcjyEAlyOivKwJXwrhpFDuiibscwvtJ8xcW1PsDM+1NdkxmrDPcliuDc5I25HkmmHEp/yzFHGwXKOznc0qZZjZzubyHCvioBB8qRYBI9EERu3RjA+qBhI8MsNqb9rOV/lA8NDn/ERsH3ZShEnq/E6KMPVyfidEmHo7/z9FmLSc/x8iTNrObxoaVns143i1CLyblFcz3POt9+OpzbN1ETDh6RHfk3IKw49UIx+0n/EYfJeUTzMuVPhsd66Pl7UMEvZ5WvvTpHxid6SVgBRz5+rjZW2D1zz1eicpnyYc9exEr6q0IYxTWxnI9deBb8CT0UmVNuyuccugcyoxXwF7PBl9odKGd8sbdoIy+Y4DQnBxY4Iu2Hd7SAr5b8s/bZeTIMqYXQLXinjerk4BB5IPtuRMXu2rGZTZFLfsUsydDku3JueMJnwdeboifGNF2g6sUirLcAGU6/dPOM3Qa8+wAaenJSG8tPEs/S3EjoHeNBaGUNhlc8tQ+YZhPsDxr0IwbGbwUGWcfbff7G8BWZn33WYnXppDIYzPws+r8FMT3K9VwybfcVgz3hCCb+E8mLg5xmr7nskp9trFzODRuDwm33bEXpkIYylgjrxPTYC3BIRxTRgel6axdbt8pWlstRyWy8O7otLCeh3DJ2F8slp02uvFu1p02i1nmZtgqF68DTTQgNr9+AMV7xCGVOCYywAAAABJRU5ErkJggg=="
+            /></span>
+            <h3>Trust & Safety</h3>
+            <p>
+              Thought leader cortado viral viral earned media long shadow
+              actionable insight
+            </p>
+          </div>
+        </div>
+
+        <div class="card-dot">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB40lEQVR4nN1UOU4DQRBEnAHHA+AHwCuAmENcfzAGAx/YkEMklixP12gjcwR+CJiAQ8JcxjwCmQQCQLXqkUawi8eErDTSTk93V3f10dX1r79qtdovIqsATgA8iMgrD/8ps9auUOdPzgEsAngG8NnmNK21C51E3QPgwHNwA6BgrZ2oVCqDPPynTN+c3n4URd0hkSfOReQNQO43Iw0mr7q02QuhJXFurZ2irFgsDgDYAFDzalCjY8e/iEw7EADzWdH0e5znKDPGjAG4zuJfRK6ooyDrKntKLbx2S8I5U9fIrwOKfEmHtBGRusqW0+g50ceC3jcCnLtM1tRmS+9HaRk88tEYM67K5x0AnNGmXC5PquwhLYMWH0ul0pB/R9hp0SaO42H/ngpApT8AvGjHjfj3dhTVOgA4DaHoWPnc9NsOYSdpaxHZ1vvhDwAuLgWouzZlnwc4v3BtCuBWWVjKGrSmGuUp4xC1AbmI43hUGSiorAGg7weAZrHgVgXH3wPOk2ctfEv/c25iAcwAeBeRDwCzqc69Wux7IOtMPUs3iqJejfxdo9/51bkadXMrekNU54SyQzgjPPzXgiaca+S7Qevay2SeiyugyA1jzFyw428gfVxc3C0A7l0NROSOrchuySzov/m+ABFiEHaQB5+BAAAAAElFTkSuQmCC"
+          />
+          <img
+            class="card-dot-big"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACI0lEQVR4nN1Uy04UQRTtIOBC4QN0O3PvOBg2fICJuFaIiP/AU/kBljziD7AVZTFdl8zKrTsZFzomDm/4CAILp2pCk1NdM91kepoal3RSSVV11TnnnnvrBsG9/qJKebil6L0W2jFCR1roCsPNd1ohzeLMf4EbxW+N8LkRjnKH4jMjxek+VAcPjNCnBID+asXLzfDZWPR5/BEG5tjDv4SMNqPVYOBu5Q5cCzW10FzeJYjRqrSAs45ow8cWC26EXlqQb4WHWnjJCNeSHHANwG3/TUiTHRJFUz3UlIfbnkN5vFd8ahT/yfG/jjM4q4UXnVWnmYlHtbQ9R+hQnguejN8AdLlrYK+1y++6COJS5AjJc4qWPMDt0ELzDuNjjEFfMvynY/z8VymUXT5++hIYRXu405TSc2fTUVYEl/gZVcqP02vjF8GlzVmVR9LrbIIqj/RNoPjCEmwXRtPrfIuEa31Y9MPHoq8uvA+3y459LLJlrRWtxGve7i7TkGYdeyNVpnUP9b+SMuV9tz+T/dBs44KHpYXUQ6vnglf5Sayel53Ak2hrYqiLIPa9ON1pFSFNtolBCJ+ReJv8eD7XaRWq+EoLaa342gi/zgRPSGgzaXa8iNB7nY2+vxiEcoC7qNZywe2l1WAAXTHVhht4oagQvBEMzF1CredWueJ1r3bdiUTRFBrX3VVEJ2aX3ngD34pma2IIjQu9xQgfJjngA5QiqqVnQu/NdwOT6hHM/c/hnQAAAABJRU5ErkJggg=="
+          />
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB40lEQVR4nN1UOU4DQRBEnAHHA+AHwCuAmENcfzAGAx/YkEMklixP12gjcwR+CJiAQ8JcxjwCmQQCQLXqkUawi8eErDTSTk93V3f10dX1r79qtdovIqsATgA8iMgrD/8ps9auUOdPzgEsAngG8NnmNK21C51E3QPgwHNwA6BgrZ2oVCqDPPynTN+c3n4URd0hkSfOReQNQO43Iw0mr7q02QuhJXFurZ2irFgsDgDYAFDzalCjY8e/iEw7EADzWdH0e5znKDPGjAG4zuJfRK6ooyDrKntKLbx2S8I5U9fIrwOKfEmHtBGRusqW0+g50ceC3jcCnLtM1tRmS+9HaRk88tEYM67K5x0AnNGmXC5PquwhLYMWH0ul0pB/R9hp0SaO42H/ngpApT8AvGjHjfj3dhTVOgA4DaHoWPnc9NsOYSdpaxHZ1vvhDwAuLgWouzZlnwc4v3BtCuBWWVjKGrSmGuUp4xC1AbmI43hUGSiorAGg7weAZrHgVgXH3wPOk2ctfEv/c25iAcwAeBeRDwCzqc69Wux7IOtMPUs3iqJejfxdo9/51bkadXMrekNU54SyQzgjPPzXgiaca+S7Qevay2SeiyugyA1jzFyw428gfVxc3C0A7l0NROSOrchuySzov/m+ABFiEHaQB5+BAAAAAElFTkSuQmCC"
+          />
+        </div>
+      </section>
+
+      <!-- search-location -->
+      <section class="search-block">
+        <div class="search-title">
+          <h3>Find Your Destination</h3>
+          <p>Most Popular Places Are Waiting For You</p>
+        </div>
+        <div class="search-choose">
+          <div class="search-bar">
+            <span
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABaUlEQVR4nO2Wz0pCQRjFf2i6ydop9ArZO1T7FhrlK0TSH+spxNcw61GCaJMFJZn71rqolfHBufBtwjtzLxLkgYELM+ecud98cxhY4Q+hDLSAW+ANmGnY90BztiZXHAIfwHzBGAPNPAwLQM8JPwEXwDawrlEHLoGhW9cVNxo9CX0BJwvEbO5UaxPz6PLOJbQbwNtz5o1Q07I7U/vTULTFfQdKIcSWO9OYsyoCz9I4CiHeiXROPDrSuAkhjUSy7o1FXRp2z1NjKlIlg/GGNKbLNt6MMR7lUOod19mpMRDJEikW19Lox1ynYYbr9CKN49AAGYtoMRiKM3EnwFooueki02IwLfaBb3EPiETXmbdVwt9Q1J8mpp9ANda44MznisGOwqGiYd175c40MU3W18iAhq7FoofAROWtuqzObF5S4Fv2vioYZtpQX93rG6mWp3koqu5lYpvd4r+Y11zZH5ZpnJg/AvfLNl4Bww/dcoIlpDH7/gAAAABJRU5ErkJggg==" /></span
+            ><input type="text" placeholder="Search..." />
+          </div>
+          <div class="search-select">
+            <span
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAfUlEQVR4nO3UsQqDQAzG8XsJpV1FLtJHl+QhtFCpXBcdfJgMJ4jDdXA7g+D3gyy3/CGEcw4AIKcoVansPyrUWUdnFYrK9LWJtnWh7KctKrTE9vVANCtl/9vXe/4wvdNwMAsL9cdHJc3TWYn3jcvfBzKahZN4UPbD9gAAcCUr57sFbhYKLAcAAAAASUVORK5CYII="
+            /></span>
+            <ul class="location">
+              <li>Thailand</li>
+              <li>Australia</li>
+              <li>Indonesia</li>
+              <li>France</li>
+              <li>Malaysia</li>
+              <li>UAE</li>
+            </ul>
+            <span class="flip-arrow"
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR4nO3UMQqAMBBE0X+JBL3/SdRCFG20yHEUJYKVVRgF50GKrT6EZcHMrLAIzECjjq7ABgyqaACWHE1A5WhpU/5exeveCrdPS1UjFH4bj7cDMirDV/xYuP6czMy+ZAcJB1CbbvpUogAAAABJRU5ErkJggg=="
+            /></span>
+          </div>
+        </div>
+      </section>
+      <!-- News block -->
+      <section class="news">
+        <div class="news-title">
+          <h3>Latest News From Blog</h3>
+          <p>See Whats People Are Sharing Their Thoughts</p>
+        </div>
+
+        <div class="news-paper">
+          <div class="news-link-l">
+            <div class="news-img">
+              <!-- <img src="" alt="news-pic" /> -->
+            </div>
+
+            <div class="new-text-block">
+              <div class="news-text">
+                <p>Most Beautiful Place In The World - Istunbul</p>
+                <i>
+                  Venture capital food-truck minimum viable product ideate pitch
+                  deck experiential cortado affordances parallax
+                </i>
+              </div>
+
+              <div class="news-text-img">
+                <!-- <img src="" alt="news-pic-text" /> -->
+              </div>
+            </div>
+          </div>
+          <!-- ------------------ -->
+          <div class="news-link-m">
+            <div class="news-text-img">
+              <!-- <img src="" alt="news-pic-text" /> -->
+            </div>
+            <div class="news-text">
+              <p>The Statue Of Liberty Travel</p>
+              <i>
+                Qualitative ship it user story grok SpaceTeam waterfall is so
+                2000 and late quantitative vs.
+              </i>
+            </div>
+            <div class="news-text-img">
+              <!-- <img src="" alt="news-pic" /> -->
+            </div>
+          </div>
+          <!-- ------------------ -->
+          <div class="news-link-r">
+            <div class="news-text-img-t">
+              <!-- <img src="" alt="news-pic" /> -->
+            </div>
+            <div class="news-text-img">
+              <!-- <img src="" alt="news-pic-text" /> -->
+            </div>
+            <div class="news-text">
+              <p>The Statue Of Liberty Travel</p>
+              <i>
+                Qualitative ship it user story grok SpaceTeam waterfall is so
+                2000 and late quantitative vs.
+              </i>
+            </div>
+          </div>
+        </div>
+        <button class="news-btn">Keep Reading</button>
+      </section>
+      <!-- client says -->
+      <section class="client">
+        <div class="client-title">
+          <h3>What Our Client Says</h3>
+          <p>People’s sharing their thought about our works</p>
+        </div>
+
+        <div class="client-swiper">
+          <div class="client-style">
+            <img src="./images/分號.png" alt="引號" />
+          </div>
+
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="client-block">
+              <div class="client-block-l"></div>
+              <div class="client-block-r">
+                <p class="client-p">
+                  Integrate 360 campaign viral disrupt pair programming latte
+                  paradigm hacker 360 campaign cortado bootstrapping.
+                  Thinker-maker-doer paradigm affordances viral bootstrapping
+                  ship it human-centered design waterfall is so 2000 and late
+                  responsive integrate parallax.
+                </p>
+                <p class="client-span">Dimitri Vegas</p>
+                <span>London, England</span>
+              </div>
+            </div>
+            <div class="card-dot">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB40lEQVR4nN1UOU4DQRBEnAHHA+AHwCuAmENcfzAGAx/YkEMklixP12gjcwR+CJiAQ8JcxjwCmQQCQLXqkUawi8eErDTSTk93V3f10dX1r79qtdovIqsATgA8iMgrD/8ps9auUOdPzgEsAngG8NnmNK21C51E3QPgwHNwA6BgrZ2oVCqDPPynTN+c3n4URd0hkSfOReQNQO43Iw0mr7q02QuhJXFurZ2irFgsDgDYAFDzalCjY8e/iEw7EADzWdH0e5znKDPGjAG4zuJfRK6ooyDrKntKLbx2S8I5U9fIrwOKfEmHtBGRusqW0+g50ceC3jcCnLtM1tRmS+9HaRk88tEYM67K5x0AnNGmXC5PquwhLYMWH0ul0pB/R9hp0SaO42H/ngpApT8AvGjHjfj3dhTVOgA4DaHoWPnc9NsOYSdpaxHZ1vvhDwAuLgWouzZlnwc4v3BtCuBWWVjKGrSmGuUp4xC1AbmI43hUGSiorAGg7weAZrHgVgXH3wPOk2ctfEv/c25iAcwAeBeRDwCzqc69Wux7IOtMPUs3iqJejfxdo9/51bkadXMrekNU54SyQzgjPPzXgiaca+S7Qevay2SeiyugyA1jzFyw428gfVxc3C0A7l0NROSOrchuySzov/m+ABFiEHaQB5+BAAAAAElFTkSuQmCC"
+              />
+              <img
+                class="card-dot-big"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACI0lEQVR4nN1Uy04UQRTtIOBC4QN0O3PvOBg2fICJuFaIiP/AU/kBljziD7AVZTFdl8zKrTsZFzomDm/4CAILp2pCk1NdM91kepoal3RSSVV11TnnnnvrBsG9/qJKebil6L0W2jFCR1roCsPNd1ohzeLMf4EbxW+N8LkRjnKH4jMjxek+VAcPjNCnBID+asXLzfDZWPR5/BEG5tjDv4SMNqPVYOBu5Q5cCzW10FzeJYjRqrSAs45ow8cWC26EXlqQb4WHWnjJCNeSHHANwG3/TUiTHRJFUz3UlIfbnkN5vFd8ahT/yfG/jjM4q4UXnVWnmYlHtbQ9R+hQnguejN8AdLlrYK+1y++6COJS5AjJc4qWPMDt0ELzDuNjjEFfMvynY/z8VymUXT5++hIYRXu405TSc2fTUVYEl/gZVcqP02vjF8GlzVmVR9LrbIIqj/RNoPjCEmwXRtPrfIuEa31Y9MPHoq8uvA+3y459LLJlrRWtxGve7i7TkGYdeyNVpnUP9b+SMuV9tz+T/dBs44KHpYXUQ6vnglf5Sayel53Ak2hrYqiLIPa9ON1pFSFNtolBCJ+ReJv8eD7XaRWq+EoLaa342gi/zgRPSGgzaXa8iNB7nY2+vxiEcoC7qNZywe2l1WAAXTHVhht4oagQvBEMzF1CredWueJ1r3bdiUTRFBrX3VVEJ2aX3ngD34pma2IIjQu9xQgfJjngA5QiqqVnQu/NdwOT6hHM/c/hnQAAAABJRU5ErkJggg=="
+              />
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB40lEQVR4nN1UOU4DQRBEnAHHA+AHwCuAmENcfzAGAx/YkEMklixP12gjcwR+CJiAQ8JcxjwCmQQCQLXqkUawi8eErDTSTk93V3f10dX1r79qtdovIqsATgA8iMgrD/8ps9auUOdPzgEsAngG8NnmNK21C51E3QPgwHNwA6BgrZ2oVCqDPPynTN+c3n4URd0hkSfOReQNQO43Iw0mr7q02QuhJXFurZ2irFgsDgDYAFDzalCjY8e/iEw7EADzWdH0e5znKDPGjAG4zuJfRK6ooyDrKntKLbx2S8I5U9fIrwOKfEmHtBGRusqW0+g50ceC3jcCnLtM1tRmS+9HaRk88tEYM67K5x0AnNGmXC5PquwhLYMWH0ul0pB/R9hp0SaO42H/ngpApT8AvGjHjfj3dhTVOgA4DaHoWPnc9NsOYSdpaxHZ1vvhDwAuLgWouzZlnwc4v3BtCuBWWVjKGrSmGuUp4xC1AbmI43hUGSiorAGg7weAZrHgVgXH3wPOk2ctfEv/c25iAcwAeBeRDwCzqc69Wux7IOtMPUs3iqJejfxdo9/51bkadXMrekNU54SyQzgjPPzXgiaca+S7Qevay2SeiyugyA1jzFyw428gfVxc3C0A7l0NROSOrchuySzov/m+ABFiEHaQB5+BAAAAAElFTkSuQmCC"
+              />
+            </div>
+          </div>
+
+          <div class="client-style-r">
+            <img src="./images/分號.png" alt="引號" />
+          </div>
+        </div>
+      </section>
+
+      <!-- book now -->
+      <div class="book-block">
+        <h2>Get special discount on your first journey</h2>
+        <button>Book Now</button>
+      </div>
+      <!-- footer -->
+      <footer>
+        <div class="footer-top">
+          <div class="about">
+            <h3>About Us</h3>
+            <a href="#">About Us</a><a href="#">Blog</a
+            ><a href="#">Contact Us</a>
+          </div>
+          <div class="address">
+            <h3>Address</h3>
+            <p>4433 Heavner Court Plainview, New York</p>
+          </div>
+          <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Email: help@agency.com <br />Cell: +516-260-0598</p>
+          </div>
+          <div class="follow">
+            <h3>Follow Us</h3>
+            <div class="follow-tag">
+              <a href="#"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIUlEQVR4nO2WPWsVQRSGRxF7URE/IiI2Fv4B8Q8oJopwLS7snffdWbZQk/yERbESUwhpgh+FnSnShETFxiJFECzEIlcsbVWMihYmKgdGWIb5uhtBixwYuOyd8z57zp5zZpTatv/NiqI4qrWeJPkEwJDkV1n2tzy7BmDsrwEHg8FhAHMkN0j+ii0AmyTntdbHtgTVWl8E8CUF9LzA57IsJzpBAUzbCEaCOtFPdYl0syu0Dc+OvKqqI13Sm0j7oSSY5P0RhX8AWCA5Q3Kl9fxTa9/dZMu41QvgLYCbAfB3AKfbGgAukDwD4FVr34ZkMvZtJz0RPbKC0yS/Of/P+HSMMScA3HL2Xo2l+bEnqheO4CzJj/al+j4dAJrkT0dnKQZ+4ysOAJfa+5qm2UnyuDHmQAA869EZBsEC8Tg87ff7e4JOfp1FXwBqRLBU7alcaNM0u5yKToPpSbV1egfgnFJqRwpM8nJAYzhqcYnTh6Io9qagvV5vN4DXgdZbCjrK0RYZFi+lZyWVEf/bkUFzJQYeCx1/Mnelp2XIBHyvx6ZbFRsgVuCe4/QcwHhd1/t8+40xJwE8S4zVOZV58LvV/R7AA3vL6AGoANwAsOoZFO5ar+v6oMoxkmdzbhypZT/PeBa0BZ/a6kVAZr/qYmVZTviGSsZaJ3m+E/SPkdwP4I5UZk6UJB9mf9Mck3aQow3AMsk1uaXYm8qaDAfp02TLbJv6B/YbQP0hWNVFhBsAAAAASUVORK5CYII="
+              /></a>
+              <a href="#"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABq0lEQVR4nO2WvUrDUBTHo4MODg4i4kfF0QdwdnIRtLh0a3r//9sSUJv6CH0GN8WPwdFVquJbOLXiIzi1dRFblAsRouTmnsYWHXogEEJOfvf8z1c8b2z/zXzfX1VKhSTvAbRIvporujfPqgByQwOWSqVlAKckeyQ/0i4AfZLXSqm1X0GVUnsAui5gwgE6Wut8JiiAoyiCgaA/oq9libSfFRqHiyOvVCorEnkB3GitN33fnwvDcLpcLi+QbFpkX3KCSV4Ionmo1+uTCel5tLx/5mwZSfWS3EryTwH3jJJWcNSnztwFQTAbg10CeBf4HabJfCcBe543EfN5ExZbwwoG8CwExw8rrfBWGthazVan7/4vKeDuSMAm746o21Znkk9ZwVrrDQe4OYziGjjHdBRXdYTg/TRwTjJABgWbPk8dIBH8fAQRn3jCxd8ZIrgdBMGiExx9bDtNcinYrEUAuyJo7IM1206WgI2vmf1eFtNa55NkV0qtF4vFmUKhMGWTl+ROJuiXkZwHcCzZQJFCV+KcSsy0g1ltAG7NFDLjNRqx5q+jAeDA2TJj8/7APgEg41OVwHUCuwAAAABJRU5ErkJggg=="
+              /></a>
+              <a href="#"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAACvElEQVR4nO1WO28TQRB2EdLwEBQ8OiTkzFwMQQhTBJqQ/CWIEQo9popANLTQnWdtIGnAgEMTRKDm0ZMApgJHwp4lHJp7sc49vGfoYKSVTns78+1889gplf5LhvRdRFZwhRU+0QrfsoJtWcE3tpmg1m86UPpbwg08x4RPtULPZsnFuOVUxwb07lT3aMLbTPjTFjQGFx2CW15nbqIY6OrMIVbwrChgmvde6/hBa09NUCb4xISXvruVsudWJjP13Mpkn6anWOFlVtgdAu9YeC70xrcmfOm55cOF6JJLPDh1VBNu/LYDN20SyY8pE3721Ikj4f4FrfB5mMUZtMK2JljjpnM+Ao88Z4U7A+WczQY2slcoi0BZ4Q+7uMKroMyc2cAe1Ax77cw6NY1IvALqYW2XZw91Ay96d0/vlaUJ55lgRf4NWjijCV5rgnXfZtOBNJtDIs3BPBQlkkkvk3N1WMvQJ1wyLjeQPbGxq8wWk4oK2+ahaN/01DB2gwm2mGBTE9bjS4aep+nroEIeJ4A1wfs8YKE3OIf1RGwJ68FZWMgD1grepXgMvTxgz63sC73aSsnojz4b93F/rscKeikxgm+WwJspHeqDD3yvfCCfavxanGrC+UyqFV7/A6oxP7kIVuLkIqyL58nkwtURVD9Ko7o2upxwKaEY6+O1keWkgqY0XgPxSwYWJOay5Nv0NAhL2EAybCYknC6Gil16LxNo+7cYdNwyjabEaTTHwC2nGj8SCrvS6AMDzqwmeCEUZgLKP4L1CNRzK8eY8Etoa2fQmjpTyhOZHIxM3ojAi4iAyoNh2FkerdSZmxiiXGE3GuRGDgLRQBh6GrVJ6xFIxhUTfNzlg9qOPpHILWVykPgUBhQdwuXCw54pg8b0SfPVsQBt504bRcUf5AgXhb5woO/5DwvhGykVaQ4yEBY2XPpX5BeFS7kGjZCtnQAAAABJRU5ErkJggg=="
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright@Parag 2016, All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="./all.js"></script>
+  </body>
+</html>
