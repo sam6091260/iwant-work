@@ -8,6 +8,7 @@
 下載檔案後使用VScode開啟，
 VScode安裝Live Server套件
 
+GitHub Pages: https://sam6091260.github.io/iwant-work/
 
 
 
